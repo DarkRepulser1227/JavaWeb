@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+        function drawLine() {
+            mycls();
+            var canvas=document.getElementById("cans");
+            var ctx=canvas.getContext("2d");
+
+            ctx.lineWidth=5;
+            ctx.moveTo(0,0);
+            ctx.lineTo(250,250);
+            ctx.stroke();
+        }
+        
+        function mycls() {
+            var canvas=document.getElementById("cans");
+            var ctx=canvas.getContext("2d");
+
+            ctx.clearRect(0,0,500,500);
+        }
+        
+        function drawText() {
+            mycls();
+            var canvas=document.getElementById("cans");
+            var ctx=canvas.getContext("2d");
+
+            ctx.font="50px 华文琥珀";
+            ctx.fillText("崔龙龙",100,100);
+
+        }
+
+        function drawText1() {
+            mycls();
+            var canvas=document.getElementById("cans");
+            var ctx=canvas.getContext("2d");
+
+            ctx.font="50px 华文琥珀";
+            ctx.strokeText("崔龙龙",100,100);
+        }
+        
+        function drawRound() {
+            mycls();
+            var canvas=document.getElementById("cans");
+            var ctx=canvas.getContext("2d");
+
+            ctx.strokeStyle="#FF0000";
+            ctx.beginPath();
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+        }
+        
+        function drawTrang() {
+            mycls();
+            var canvas=document.getElementById("cans");
+            var ctx=canvas.getContext("2d");
+
+            ctx.beginPath();
+            ctx.moveTo(250,20);
+            ctx.lineTo(300,300);
+            ctx.lineTo(400,400);
+            ctx.closePath();
+
+            ctx.strokeStyle="#FFB6C1";
+            ctx.stroke();
+
+        }
+        
+        function drawKuai() {
+            mycls();
+            var canvas=document.getElementById("cans");
+            var ctx=canvas.getContext("2d");
+
+            ctx.fillStyle="#00008B";
+            ctx.fillRect(10,50,250,175);
+        }
+        
+        function saves() {
+            var canvas=document.getElementById("cans");
+            var ctx=canvas.getContext("2d");
+            var img=canvas.toDataURL("image/png").replace("image/png","image/octet-stream");
+            window.location.href=img;
+        }
+    </script>
+</head>
+<body>
+    <canvas id="cans" width="500" height="500" style="border: 1px solid blue">
+
+    </canvas><br/>
+    <button onclick="mycls()">清空画板</button>
+    <button onclick="drawLine()">画线</button>
+    <button onclick="drawText()">写字</button>
+    <button onclick="drawText1()">写空心字</button>
+    <button onclick="drawRound()">画圆</button>
+    <button onclick="drawTrang()">画三角形</button>
+    <button onclick="drawKuai()">画矩形</button>
+    <button onclick="saves()">保存图像</button>
+
+</body>
+</html>

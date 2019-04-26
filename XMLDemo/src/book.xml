@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book ISDN="123">
+		<bid>1</bid>
+		<bname id="321">雍正</bname>
+		<weight>298.00</weight>
+	</book>
+	<book ISDN="1234">
+		<bid>2</bid>
+		<bname id="4321">乾隆</bname>
+		<weight>198.00</weight>
+	</book>
+	<book ISDN="12345">
+		<bid>3</bid>
+		<bname id="54321">张建军</bname>
+		<weight>98.00</weight>
+	</book>
+	<book ISDN="123456">
+		<bid>4</bid>
+		<bname id="654321">王海明</bname>
+		<weight>9.8</weight>
+	</book>
+</books>

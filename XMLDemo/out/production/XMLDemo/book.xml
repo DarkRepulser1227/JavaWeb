@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book>
+		<bid>1</bid>
+		<bname>雍正</bname>		
+		<weight>298.00</weight>
+	</book>
+	<book>
+		<bid>2</bid>
+		<bname>乾隆</bname>		
+		<weight>198.00</weight>
+	</book>
+	<book>
+		<bid>3</bid>
+		<bname>张建军</bname>		
+		<weight>98.00</weight>
+	</book>
+	<book>
+		<bid>4</bid>
+		<bname>王海明</bname>		
+		<weight>9.8</weight>
+	</book>
+</books>

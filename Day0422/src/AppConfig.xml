@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <properties resource="Appcon.Properties"></properties>
+
+    <typeAliases>
+        <package name="com.iss.po"/>
+    </typeAliases>
+
+    <!--数据库的配置环境 -->
+    <environments default="localhost">
+        <environment id="localhost">
+            <!--配置JDBC事务管理， 由mybatis进行管理-->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--配置数据源，采用mytatis的连接池 -->
+            <dataSource type="POOLED">
+                <property name="url" value="${url}"></property>
+                <property name="driver" value="${drvier}"></property>
+                <property name="username" value="${username}"></property>
+                <property name="password" value="${password}"></property>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+       <package name="com.iss.mapper"/>
+    </mappers>
+
+</configuration>
